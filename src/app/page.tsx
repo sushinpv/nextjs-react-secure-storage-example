@@ -6,11 +6,11 @@ import secureLocalStorage from "react-secure-storage";
 
 export default function Home() {
   useEffect(() => {
-    console.log("NEXT_PUBLIC_SECURE_LOCAL_STORAGE_DISABLED_KEYS", process.env.NEXT_PUBLIC_SECURE_LOCAL_STORAGE_DISABLED_KEYS);
+    // console.log("NEXT_PUBLIC_SECURE_LOCAL_STORAGE_DISABLED_KEYS", process.env.NEXT_PUBLIC_SECURE_LOCAL_STORAGE_DISABLED_KEYS);
 
-    // secureLocalStorage.setItem("object", {
-    //   message: "This is testing of local storage",
-    // });
+    secureLocalStorage.setItem("object", {
+      message: "This is testing of local storage",
+    });
     console.log(secureLocalStorage.getItem("object"));
   }, []);
 
